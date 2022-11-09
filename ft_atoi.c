@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/09 09:27:20 by lperroti          #+#    #+#             */
+/*   Updated: 2022/11/09 09:45:33 by lperroti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	    ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	num;
 	int	sign;
@@ -9,9 +21,9 @@ int	    ft_atoi(const char *nptr)
 	while ((*nptr >= '\t' && *nptr <= '\r') || *nptr == ' ')
 		nptr++;
 	sign = 1;
-	if(*nptr == '-') 
+	if (*nptr == '-')
 		sign = -1;
-	if(*nptr == '-' || *nptr == '+')
+	if (*nptr == '-' || *nptr == '+')
 		nptr++;
 	while (*nptr >= '0' && *nptr <= '9')
 	{
@@ -21,4 +33,3 @@ int	    ft_atoi(const char *nptr)
 	}
 	return (num * sign);
 }
-

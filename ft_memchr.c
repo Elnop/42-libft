@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/09 09:29:04 by lperroti          #+#    #+#             */
+/*   Updated: 2022/11/09 09:46:36 by lperroti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *str;
-	unsigned char value;
-	size_t		i;
+	unsigned char	*str;
+	unsigned char	value;
+	size_t			i;
 
 	str = (unsigned char)s;
 	value = (unsigned char)c;

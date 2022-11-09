@@ -6,7 +6,7 @@
 /*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 03:45:15 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/08 05:56:09 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/09 09:37:53 by lperroti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	size_t i;
+	size_t	i;
 
 	while (len > 0 && *big)
 	{
@@ -28,4 +28,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-

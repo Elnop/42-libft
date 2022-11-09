@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/09 05:39:26 by lperroti          #+#    #+#             */
+/*   Updated: 2022/11/09 09:30:56 by lperroti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	strscount(const char *str, char charset)
@@ -78,12 +90,3 @@ char	**ft_split(char const *s, char c)
 	tab[tabindex] = NULL;
 	return (tab);
 }
-
-#include <stdio.h>
-
-int main()
-{
-	printf("%s", ft_split("-----", '-')[0]);
-	return (0);
-}
-

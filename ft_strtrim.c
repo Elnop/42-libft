@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/11/09 09:42:11 by lperroti          #+#    #+#             */
+/*   Updated: 2022/11/09 09:42:18 by lperroti         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static int	ft_ischarset(char c, const char *charsets)
 {
-	while(*charsets)
+	while (*charsets)
 	{
-		if(*charsets == c)
+		if (*charsets == c)
 			return (1);
 		charsets++;
 	}
@@ -33,7 +45,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	len;
 
 	len = ft_strlen_trimed(s1, set);
-	str = malloc((len + 1)* sizeof(char));
+	str = malloc((len + 1) * sizeof(char));
 	i = 0;
 	while (*s1 && ft_ischarset(*s1, set))
 		s1++;
@@ -41,11 +53,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 		str[i++] = *s1++;
 	str[i] = 0;
 	return (str);
-}
-
-#include <stdio.h>
-int main()
-{
-	printf("%s\n", ft_strtrim("    Hello World      ", " "));
-	return 0;
 }
