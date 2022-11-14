@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:31:01 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/09 09:45:21 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/14 02:16:15 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(char *s, int c)
 {
 	while (*s && *s != c)
 		s++;
-	if (!*s)
+	if (!*s) 
 		return (NULL);
-	return (*s);
+	return (s);
 }

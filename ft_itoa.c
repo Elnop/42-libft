@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:45:59 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/09 09:46:50 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/13 07:55:07 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
 void	writenum(char *dest, long nb)
 {

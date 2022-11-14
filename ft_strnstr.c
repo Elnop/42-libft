@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 03:45:15 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/09 09:37:53 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/14 02:18:50 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (i < len && little[i] == big[i])
 			i++;
 		if (!little[i])
-			return (big);
+			return (char *)(big);
 		big++;
 		len--;
 	}

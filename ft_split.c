@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 05:39:26 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/09 09:30:56 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/13 12:43:43 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,3 +90,4 @@ char	**ft_split(char const *s, char c)
 	tab[tabindex] = NULL;
 	return (tab);
 }
+
