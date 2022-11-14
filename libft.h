@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 14:06:02 by elnop             #+#    #+#             */
-/*   Updated: 2022/11/13 23:06:10 by leon             ###   ########.fr       */
+/*   Updated: 2022/11/14 19:08:52 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int		ft_isascii(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 size_t	ft_strlen(const char *s);
+int 	ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
 void	*ft_memcpy(void *restrict dest, const void *restrict src, size_t n);
 void	ft_bzero(void *s, size_t n);
@@ -58,5 +59,4 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void 	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
 #endif
