@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 05:39:26 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/13 12:43:43 by leon             ###   ########.fr       */
+/*   Updated: 2022/11/14 20:34:36 by lperroti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	strscount(const char *str, char charset)
 {
@@ -25,8 +26,8 @@ static size_t	strscount(const char *str, char charset)
 			nb++;
 		while (*str != charset && *str)
 			str++;
-		return (nb);
 	}
+	return (nb);
 }
 
 static size_t	wordlen(const char *s, char c)
@@ -90,4 +91,3 @@ char	**ft_split(char const *s, char c)
 	tab[tabindex] = NULL;
 	return (tab);
 }
-

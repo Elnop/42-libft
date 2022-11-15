@@ -6,11 +6,12 @@
 /*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:42:11 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/09 09:42:18 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/14 20:36:56 by lperroti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_ischarset(char c, const char *charsets)
 {
@@ -41,7 +42,7 @@ static size_t	ft_strlen_trimed(const char *str, const char *charsets)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*str;
-	int		i;
+	size_t	i;
 	size_t	len;
 
 	len = ft_strlen_trimed(s1, set);

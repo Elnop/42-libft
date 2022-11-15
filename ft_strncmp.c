@@ -3,31 +3,25 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 18:46:45 by leon              #+#    #+#             */
-/*   Updated: 2022/11/14 19:07:46 by leon             ###   ########.fr       */
+/*   Updated: 2022/11/15 05:27:29 by lperroti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	size_t			i;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
-	while (i < n, s1[i], s2[i])
-	{
-		if(s1[i] - s2[i])
-			return (s1[i] - s2[i]);
+	str1 = (unsigned char *)s1;
+	str2 = (unsigned char *)s2;
+	i = 0;
+	while (i < n && str1[i] && !(s1[i] - str2[i]))
 		i++;
-	}
-	return (0);
-}
-int main()
-{
-	const char s = "TEST";
-	const char str = "TEST";
-	printf("-----> %d", ft_strncmp(s, str, 1));
-	return (0);
+	return (str1[i] - str2[i]);
 }
