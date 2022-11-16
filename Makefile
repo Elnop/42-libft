@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: leon <leon@student.42.fr>                  +#+  +:+       +#+         #
+#    By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/14 02:02:24 by leon              #+#    #+#              #
-#    Updated: 2022/11/16 11:11:49 by leon             ###   ########.fr        #
+#    Updated: 2022/11/16 21:43:49 by lperroti         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -78,16 +78,12 @@ $(NAME): $(OBJS)
 all: $(NAME)
 
 clean:
-	rm -f $(OBJS) $(OBJS_B)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: clean all
-
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 
 bonus: $(OBJS_BONUS) $(OBJS)
 	$(AR) $(NAME) $^

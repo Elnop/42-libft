@@ -6,7 +6,7 @@
 /*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:30:40 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/14 22:31:20 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/16 21:31:29 by lperroti         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return ((void *)str);
 }
- 
