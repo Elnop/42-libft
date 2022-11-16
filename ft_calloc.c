@@ -6,7 +6,7 @@
 /*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:27:50 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/13 01:29:59 by leon             ###   ########.fr       */
+/*   Updated: 2022/11/16 10:35:26 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,10 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	return (malloc(nmemb * size));
+	void	*ptr;
+	ptr = malloc(nmemb * size);
+	if (!ptr)
+		return (NULL);
+	ft_bzero(ptr, nmemb * size);
+	return (ptr);
 }

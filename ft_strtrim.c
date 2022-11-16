@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 09:42:11 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/14 20:36:56 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/16 03:13:07 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ static size_t	ft_strlen_trimed(const char *str, const char *charsets)
 
 	while (*str && ft_ischarset(*str, charsets))
 		str++;
+	if (!*str)
+		return (0);
 	len = 0;
 	while (*str++)
 		len++;
-	str--;
-	while (!ft_ischarset(*str, charsets) && *str--)
+	str -= 2;
+	while (ft_ischarset(*str, charsets) && *str--)
 		len--;
 	return (len);
 }
@@ -47,6 +49,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	len = ft_strlen_trimed(s1, set);
 	str = malloc((len + 1) * sizeof(char));
+	if (!str)
+		return (NULL);
 	i = 0;
 	while (*s1 && ft_ischarset(*s1, set))
 		s1++;
@@ -55,3 +59,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	str[i] = 0;
 	return (str);
 }
+

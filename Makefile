@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+         #
+#    By: leon <leon@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/14 02:02:24 by leon              #+#    #+#              #
-#    Updated: 2022/11/15 00:24:20 by lperroti         ###   ########.fr        #
+#    Updated: 2022/11/16 11:11:49 by leon             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,23 +43,23 @@ FILES = ft_atoi \
 		ft_strlen \
 		ft_strmapi \
 		ft_strncmp \
+		ft_substr \
 		ft_strnstr \
 		ft_strrchr \
 		ft_strtrim \
-		ft_substr \
 		ft_tolower \
 		ft_toupper \
 		ft_isprint \
 
-FILES_BONUS = ft_lstnew_bonus \
-			ft_lstadd_front_bonus \
-			ft_lstsize_bonus \
-			ft_lstlast_bonus \
-			ft_lstadd_back_bonus \
-			ft_lstdelone_bonus \
-			ft_lstclear_bonus \
-			ft_lstiter_bonus \
-			ft_lstmap_bonus \
+FILES_BONUS = ft_lstnew \
+			ft_lstadd_front \
+			ft_lstsize \
+			ft_lstlast \
+			ft_lstadd_back \
+			ft_lstdelone \
+			ft_lstclear \
+			ft_lstiter \
+			ft_lstmap \
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lperroti <lperroti@student.42.fr>          +#+  +:+       +#+        */
+/*   By: leon <leon@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 17:36:40 by lperroti          #+#    #+#             */
-/*   Updated: 2022/11/12 18:19:53 by lperroti         ###   ########.fr       */
+/*   Updated: 2022/11/16 03:14:53 by leon             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	cpy = ft_strdup(s);
+	if (!cpy)
+		return (cpy);
 	i = 0;
 	while (cpy[i])
 	{
